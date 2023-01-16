@@ -1,4 +1,24 @@
+body{
+    margin: 0;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
 .main-img{
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,6 +26,61 @@
     width: 100%;
     height: 241px;
 
-    background-color: rebeccapurple;
+}
 
+.main-img::before{
+    position: absolute;
+    z-index: -1;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-image: url("https://scontent.fcue1-1.fna.fbcdn.net/v/t1.6435-9/119003654_3577250808986566_4913772403349544018_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=btf94-5P3NgAX_jOAN7&_nc_ht=scontent.fcue1-1.fna&oh=00_AfCWbaSRnX2qjQBrDGDd9BuqLMB6GuvrHN67QGlZuVMW-w&oe=63ED3B04");
+    background-position: center;
+}
+
+.main-img::after{
+    position: absolute;
+    z-index: -1;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    
+    background-color: rgba(143, 64, 0, 0.63);
+}
+
+.text-content{
+    text-align: center;
+}
+
+.text-content p{
+    color: white;
+}
+
+.catalogue{
+    width: 100%;
+    height: auto;
+
+    background-color: red;
+
+    text-align: center;
+}
+.catalogue h2{
+    margin: 0;
+}
+
+.img-projectable{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 400px;
+
+    overflow: hidden;
+}
+.img-projectable img{
+    margin-left: 10px;
 }
