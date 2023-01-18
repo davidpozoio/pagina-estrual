@@ -265,3 +265,11 @@ footer{
     font-size: 10px;
     line-height: 12px;
 }
+
+.door h3{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: white;
+}
