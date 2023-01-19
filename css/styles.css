@@ -1,9 +1,14 @@
 
 body{
+    position: relative;
+
     font-family: 'Lexend Zetta', sans-serif;
 
     margin: 0;
     background-color: #1F1F1F;
+
+    overflow-x: hidden;
+
 }
 
 
@@ -14,6 +19,7 @@ body{
   'GRAD' 0,
   'opsz' 48
 }
+
 
 
 nav{
@@ -57,6 +63,21 @@ ul li{
 }
 
 
+@media (hover: hover){
+    .start-button:hover, 
+    .contact-button:hover,
+    .material-symbols-outlined:hover{
+        color: #c56e30;
+        cursor: pointer;
+    }
+}
+
+.start-button:active, 
+.contact-button:active{
+    color: #c56e30;
+    cursor: pointer;
+}
+
 .start-and-button{
     display: flex;
     align-items: center;
@@ -64,6 +85,217 @@ ul li{
 .start-and-button li{
     margin-right: 20px;
 }
+
+.dropdown-menu{
+    position: fixed;
+    right: -100%;
+    top: 0;
+
+    width: 93vw;
+    height: 100vh;
+
+    border-radius: 10px 0 0 10px;
+    outline: 1px solid #FFB47D;
+    background-color: #1F1F1F;
+    
+    
+   
+}
+
+@keyframes dropdown-menu-animation{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+@keyframes dropdown-menu-animation-reverse {
+    0%{
+        right: 0;
+    }
+
+    100%{
+        right: -100%;
+    }
+}
+
+
+
+
+.menu-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 50px;
+
+    border-bottom: 1px solid #FFB47D;
+
+}
+
+.menu-header p{
+    margin-left: 10px;
+
+    color: #FFB47D;
+
+    font-family: 'Lexend Zetta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    
+}
+
+.exit-menu-button{
+    position: relative;
+
+    margin-right: 10px;
+
+    color: white;
+    background-color: transparent;
+    border: 0;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.exit-menu-button::before{
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    left: -3px;
+
+
+    content: "";
+    width: 125%;
+    height: 125%;
+
+    border-radius: 50%;
+    background-color: #b8662ccb;
+
+    transform: scale(0);
+}
+
+@keyframes animation-scale-exit-button {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@media (hover: hover){
+    .exit-menu-button:hover::before{
+        animation-name: animation-scale-exit-button;
+        animation-duration: 0.1s;
+        animation-fill-mode: forwards;
+    }
+
+}
+
+.exit-menu-button:active::before{
+    transform: scale(1);
+}
+
+.window-buttons,
+.door-buttons,
+.information-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.window-buttons button,
+.door-buttons button{
+    position: relative;
+
+    padding-left: 10px;
+    margin-top: 20px;
+
+    width: 100%;
+    height: 30px;
+
+    color: white;
+    background-color: transparent;
+    border: 0;
+
+    overflow: hidden;
+
+    text-align: left;
+    font-family: 'Lexend Zetta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.information-buttons{
+    margin-top: 20px;
+}
+
+.information-buttons button{
+    position: relative;
+    margin-top: 20px;
+
+    color: #FFB47D;
+    background-color: transparent;
+    border: 0;
+
+    overflow: hidden;
+
+    font-family: 'Lexend Zetta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+
+
+.information-buttons button::before,
+.window-buttons button::before,
+.door-buttons button::before{
+    position: absolute;
+    left: -100%;
+    z-index: -1;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0 100px 100px 0;
+    background-color: #b8662ccb;
+}
+
+@keyframes animation-hover-buttons{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@media (hover: hover){
+    .information-buttons button:hover::before,
+    .window-buttons button:hover::before,
+    .door-buttons button:hover::before{
+        animation-name: animation-hover-buttons;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.information-buttons button:active::before,
+.window-buttons button:active::before,
+.door-buttons button:active::before{
+     left: 0;
+}
+
 
 
 .main-img{
@@ -211,6 +443,8 @@ iframe{
 .img-projectable img{
     margin: 10px;
 
+    border-radius: 20px;
+
 }
 .img-sliding{
     display: flex;
@@ -224,7 +458,7 @@ iframe{
 .img-sliding img{
     margin: 10px;
 
-    
+    border-radius: 20px;    
 }
 
 .glass h3{

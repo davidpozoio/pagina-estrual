@@ -19,11 +19,38 @@
             <ul>
                 <li>ESTRUAL</li>
                 <div class="start-and-button">
-                    <li>INICIO</li>
+                    <li class="start-button">INICIO</li>
+                    <li class="contact-button">CONTACTO</li>
                     <li>
                         <span class="material-symbols-outlined">
                         menu
                         </span>
+                        <div class="dropdown-menu">
+                            <div class="menu-header">
+                                <p>ESTRUAL</p>
+                                <button class="exit-menu-button">X</button>
+                            </div>
+                            <div class="body-menu">
+                                <div class="information-buttons">
+                                    <button class="whoare-button">¿QUIÉNES SOMOS?</button>
+                                    <button class="whereare-button">¿CÓMO UBICARNOS?</button>
+                                </div>
+                                <p>VENTANAS</p>
+                                <div class="window-buttons">
+                                    <button class="projectable-window-button">VENTANAS PROYECTADAS</button>
+                                    <button class="sliding-window-button">VENTANAS CORREDIZAS</button>
+                                    <button class="fixed-window-button">VENTANAS FIJAS</button>
+                                    <button class="swining-window-button">VENTANAS BATIENTES</button>
+                                </div>
+                             
+                                <p>PUERTAS</p>
+                                <div class="door-buttons">
+                                    <button class="swining-door-button">PUERTAS BATIENTES</button>
+                                    <button class="sliding-door-button">PUERTAS CORREDIZAS</button>
+                                </div>
+                              
+                            </div>
+                        </div>
                     </li>
                 </div>
                 
@@ -122,8 +149,23 @@
 
         let footerbox = document.querySelector("footer");
         footerbox.style.setProperty("height",viewportHeight+"px");
+
+        let box1 = document.querySelector(".img-projectable");
+        
+        window.scroll({
+            top: 0,
+            left: 0,
+
+            behavior: "smooth"
+        });
+
+
+        console.log(box1);
     </script>
 
+    <script src="scripts/drop-menu.js"></script>
+    <script src="scripts/scroll.js"></script>
+    
 
 </body>
 </html>
