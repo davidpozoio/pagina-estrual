@@ -1,3 +1,35 @@
+function detectButton(classButton, sectionName, space){
+    let button = document.querySelector("."+classButton);
+
+    button.addEventListener("click",()=>{
+        window.scroll({
+            top: (window.scrollY + parseInt(document.querySelector("."+sectionName).getBoundingClientRect().top - space) ),
+
+            behavior: "smooth"
+        });
+
+        let dropMenu = document.querySelector(".dropdown-menu")
+        dropMenu.style.animation = "dropdown-menu-animation-reverse 0.5s forwards";
+        document.body.style.setProperty("overflow-y","scroll");
+
+
+    })
+
+}
+
+detectButton("whoare-button","whoare",50);
+detectButton("whereare-button","whereare",60);
+
+detectButton("projectable-window-button","projectable-glass", 65);
+detectButton("sliding-window-button","sliding-glass",70);
+
+detectButton("fixed-window-button","fixed-glass",70);
+
+detectButton("swining-window-button","swinging-glass",70);
+
+detectButton("swining-door-button","swinging-door",70);
+detectButton("sliding-door-button","sliding-door",70);
+
 let starButton = document.querySelector(".start-button");
 
 starButton.addEventListener("click",()=>{
@@ -16,59 +48,10 @@ contactButton.addEventListener("click",()=>{
     });
 })
 
-
-
-
-let whoButton = document.querySelector(".whoare-button");
-let whoPosition = document.querySelector(".whoare").getBoundingClientRect().top;
-
-
-
-whoButton.addEventListener("click",()=>{
-
-    console.log(whoPosition);
-
-    window.scroll({
-        top: whoPosition,
-        behavior: "smooth"
-    });
-
-    dropMenu.style.animation = "dropdown-menu-animation-reverse 1s forwards";
-    document.body.style.setProperty("overflow-y","scroll");
+window.addEventListener("scroll",()=>{
+   
+    console.log(document.querySelector(".projectable-glass").getBoundingClientRect().top);
+    console.log(window.scrollY);
+    console.log(window.scrollY + parseInt(document.querySelector(".projectable-glass").getBoundingClientRect().top))
 
 })
-
-let whereButton = document.querySelector(".whereare-button");
-let wherePosition = document.querySelector(".whereare").getBoundingClientRect().top;
-
-
-whereButton.addEventListener("click",()=>{
-
-    console.log(wherePosition)
-
-    window.scroll({
-        top: wherePosition,
-        behavior: "smooth"
-    });
-
-    dropMenu.style.animation = "dropdown-menu-animation-reverse 1s forwards";
-    document.body.style.setProperty("overflow-y","scroll");
-
-})
-
-let projectableButton = document.querySelector(".projectable-window-button");
-
-
-projectableButton.addEventListener("click",()=>{
-
-    let projectablePosition = document.querySelector(".projectable-glass").getBoundingClientRect().top;
-    console.log(projectablePosition.top);
-
-
-    window.scroll({
-        top: projectablePosition.top,
-        behavior: "smooth"
-    })
-})
-
-console.log(projectableButton);
