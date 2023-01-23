@@ -16,11 +16,22 @@
 <body>
     <header>
         <nav>
+            <div class="row-header">
+                <div class="buttons-row-header">
+                    <button class="row-header-start">↑</button>
+                    <button class="row-header-contact">↓</button>
+                </div>
+                    
+                <ul>
+                    <li class="row-text1">IMAGEN 1</li>
+                    <li class="row-text2">IMAGEN 2</li>
+                </ul>
+            </div>
             <ul>
                 <li>ESTRUAL</li>
                 <div class="start-and-button">
-                    <li class="start-button">INICIO</li>
-                    <li class="contact-button">CONTACTO</li>
+                    <button class="start-button">INICIO</button>
+                    <button class="contact-button">CONTACTO</button>
                     <li>
                         <span class="material-symbols-outlined">
                         menu
@@ -66,69 +77,106 @@
     <main>
         <div class="information">
             <div class="whoare">
-                <h2>¿QUIÉNES SOMOS?</h2>
-                <p>Nos ponemos a su disposición para realizar trabajos en aluminio y vidrio; le ofrecemos trabajos garantizados; para una cotizacion; sin compromiso; podria contactarnos para coordinar la misma</p>
+                <div>
+                    <h2>¿QUIÉNES SOMOS?</h2>
+                    <p>Nos ponemos a su disposición para realizar trabajos en aluminio y vidrio; le ofrecemos trabajos garantizados; para una cotizacion; sin compromiso; podria contactarnos para coordinar la misma</p>
+
+                </div>
+                
+                <img src="./imagenes/whoare_img.jpg" >
             </div>
             <div class="whereare">
-                <h2>¿CÓMO UBICARNOS?</h2>
-                <P>Nuestras Instalaciones se encuentran ubicadas en la ciudad de Cuenca, en la parroquia Ricaurte, en la calle Julia Bernal 2-26 y Juan Pablo II; usted puede ingresar ya sea por el parque industrial por la avenida de 25 de marzo, cruzando el Rio Machangara o por la calle principal de acceso a Ricaurte subiendo por la gasolinera de Machangara hasta llegar a las 4 Esquinas</P>
+                <div>
+                    <h2>¿CÓMO UBICARNOS?</h2>
+                    <P>Nuestras Instalaciones se encuentran ubicadas en la ciudad de Cuenca, en la parroquia Ricaurte, en la calle Julia Bernal 2-26 y Juan Pablo II; usted puede ingresar ya sea por el parque industrial por la avenida de 25 de marzo, cruzando el Rio Machangara o por la calle principal de acceso a Ricaurte subiendo por la gasolinera de Machangara hasta llegar a las 4 Esquinas</P>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.8098601217557!2d-78.97220978583368!3d-2.871168140216623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd17e9ad1292a5%3A0xc2bb0377618cd956!2sESTRUAL%20Aluminio%20y%20vidrio!5e0!3m2!1ses!2sec!4v1673992927062!5m2!1ses!2sec" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.8098601217557!2d-78.97220978583368!3d-2.871168140216623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd17e9ad1292a5%3A0xc2bb0377618cd956!2sESTRUAL%20Aluminio%20y%20vidrio!5e0!3m2!1ses!2sec!4v1673992927062!5m2!1ses!2sec" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           
         </div>
 
         <div class="catalogue">
             <h2> CATÁLOGO</h2>
             <div class="glass">
-                <div class="projectable-glass">
-                    <h3>VENTANAS PROYECTADAS</h3>
-                    <div class="img-projectable">
-                        <img src="./imagenes/Ventana-proyectaç.jpg">
-                        <img src="./imagenes/Ventana proyectada.jpg">
-                        <img src="./imagenes/ventanas-proyectadas.jpg">
+                <div class="first-row-img">
+                    <div class="projectable-glass">
+                        <h3>VENTANAS PROYECTADAS</h3>
+                        <div class="img-projectable">
+                            <img src="./imagenes/Ventana-proyectaç.jpg" class="img1">
+
+                                <div class="img-content-drop">
+                                    <img src="./imagenes/Ventana proyectada.jpg" class="img2">
+                                    <img src="./imagenes/ventanas-proyectadas.jpg" class="img3">
+                                </div>
+                               
+                            
+                        </div>
+                    </div>
+                    <div class="sliding-glass">
+                        <h3>VENTANAS CORREDIZAS</h3>
+                        <div class="img-sliding">
+                            <img src="./imagenes/ventana corrediza.jpg" class="img1">
+                            <div class="img-content-drop">
+                                <img src="./imagenes/ventana-corrediza.jpg" class="img2">
+                                <img src="./imagenes/Ventana_corrediza.jpg" class="img3">
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                </div>
+                <div class="second-row-img">
+                    <div class="fixed-glass">
+                        <h3>VENTANAS FIJAS</h3>
+                        <div class="img-sliding">
+                            <img src="./imagenes/ventana  fija.jpg" class="img1-second-row">
+                            <div class="img-second-row-drop">
+                                <img src="./imagenes/VENTANAS-FIJAS.jpg" class="img2-second-row">
+                                <img src="./imagenes/Ventana_fija.jpg" class="img3-second-row">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="swinging-glass">
+                        <h3>VENTANAS BATIENTES</h3>
+                        <div class="img-sliding">
+                            <img src="./imagenes/ventana batiente.jpg" class="img1-second-row">
+                            <div class="img-second-row-drop">
+                                <img src="./imagenes/ventana-batiente.jpg" class="img2-second-row">
+                                <img src="./imagenes/Ventana_batiente.jpg" class="img3-second-row">
+                            </div>
+                         
+                        </div>
                     </div>
                 </div>
-                <div class="sliding-glass">
-                    <h3>VENTANAS CORREDIZAS</h3>
-                    <div class="img-sliding">
-                        <img src="./imagenes/ventana corrediza.jpg">
-                        <img src="./imagenes/ventana-corrediza.jpg">
-                        <img src="./imagenes/Ventana_corrediza.jpg">
-                    </div>
-                </div>
-                <div class="fixed-glass">
-                    <h3>VENTANAS FIJAS</h3>
-                    <div class="img-sliding">
-                        <img src="./imagenes/ventana  fija.jpg">
-                        <img src="./imagenes/VENTANAS-FIJAS.jpg">
-                        <img src="./imagenes/Ventana_fija.jpg">
-                    </div>
-                </div>
-                <div class="swinging-glass">
-                    <h3>VENTANAS BATIENTES</h3>
-                    <div class="img-sliding">
-                        <img src="./imagenes/ventana batiente.jpg">
-                        <img src="./imagenes/ventana-batiente.jpg">
-                        <img src="./imagenes/Ventana_batiente.jpg">
-                    </div>
-                </div>
+                
             </div>
             <div class="door">
-                <div class="swinging-door">
-                    <h3>PUERTAS BATIENTES</h3>
-                    <div class="img-sliding">
-                        <img src="./imagenes/Puerta batiente.jpg">
-                        <img src="./imagenes/Puerta-batiente.jpg">
-                        <img src="./imagenes/Puerta_batiente.jpg">
+                <div class="third-row-img">
+                    <div class="swinging-door">
+                        <h3>PUERTAS BATIENTES</h3>
+                        <div class="img-sliding">
+                            <img src="./imagenes/Puerta batiente.jpg" class="img1-third-row">
+                            <div class="img-third-row-drop">
+                                <img src="./imagenes/Puerta-batiente.jpg" class="img2-third-row">
+                                <img src="./imagenes/Puerta_batiente.jpg" class="img3-third-row">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="sliding-door">
+                        <h3>PUERTAS CORREDIZAS</h3>
+                        <div class="img-sliding">
+                            <img src="./imagenes/Puerta corrediza.jpg" class="img1-third-row">
+                            <div class="img-third-row-drop">
+                                <img src="./imagenes/Puerta-corrediza.jpg" class="img2-third-row">
+                                <img src="./imagenes/Puerta_corrediza.jpg" class="img3-third-row">
+                            </div>
+                         
+                        </div>
                     </div>
                 </div>
-                <div class="sliding-door">
-                    <h3>PUERTAS CORREDIZAS</h3>
-                    <div class="img-sliding">
-                        <img src="./imagenes/Puerta corrediza.jpg">
-                        <img src="./imagenes/Puerta-corrediza.jpg">
-                        <img src="./imagenes/Puerta_corrediza.jpg">
-                    </div>
-                </div>
+                
             </div>    
         </div>
     </main>
@@ -152,29 +200,13 @@
         </div>
     </footer>
 
-    <script>
-        let viewportHeight = window.innerHeight;
-        viewportHeight -= 70;
 
-        let footerbox = document.querySelector("footer");
-        footerbox.style.setProperty("height",viewportHeight+"px");
-
-        let box1 = document.querySelector(".img-projectable");
-        
-        window.scroll({
-            top: 0,
-            left: 0,
-
-            behavior: "smooth"
-        });
-
-
-        console.log(box1);
-    </script>
-
+    <script src="scripts/media-query.js"></script> 
+    <script src="scripts/drop-img.js"></script>
+    <script src="scripts/header-change.js"></script>
     <script src="scripts/drop-menu.js"></script>
     <script src="scripts/scroll.js"></script>
-    
+   
 
 </body>
 </html>
